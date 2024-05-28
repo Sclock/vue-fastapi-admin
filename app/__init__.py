@@ -77,6 +77,7 @@ def build_orm_config(db_type: str):
         logger.info("当前使用SQLite数据库")
         credentials = {"file_path": f"{settings.BASE_DIR}/db.sqlite3"}
     else:
+        db_type = "sqlite"
         logger.info("未提供数据库类型,默认使用使用SQLite数据库")
         credentials = {"file_path": f"{settings.BASE_DIR}/db.sqlite3"}
 
